@@ -14,8 +14,11 @@ import java.util.List;
 public class WikiController {
 
 
-    @Autowired
-    private WikiService wikiService;
+    private final WikiService wikiService;
+
+    public WikiController(WikiService wikiService) {
+        this.wikiService = wikiService;
+    }
 
     @QueryMapping
     public Breed getBreedById(@Argument long id) {
