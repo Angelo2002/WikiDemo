@@ -4,6 +4,8 @@ import com.example.wikidemo.Entity.Breed;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class WikiServiceMock implements WikiService {
 
@@ -33,5 +35,13 @@ public class WikiServiceMock implements WikiService {
         public void updateBreed(Breed breed) {
             return;
         }
+
+    @Override
+    public List<Breed> getAllBreeds() {
+        return List.of(
+                Breed.builder().id(1L).name("BreedA").description("Got by list").build(),
+                Breed.builder().id(2L).name("BreedB").description("Got by list").build()
+        );
+    }
 
 }

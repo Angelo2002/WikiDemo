@@ -29,10 +29,7 @@ public class WikiController {
     @QueryMapping
     public List<Breed> breeds() {
         // This is a mock implementation. In a real scenario, you'd fetch this from a repository or service.
-        return Arrays.asList(
-                new Breed(1L, "Breed1", "Description1"),
-                new Breed(2L, "Breed2", "Description2")
-        );
+        return wikiService.getAllBreeds();
 
     }
 }
