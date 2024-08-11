@@ -1,0 +1,10 @@
+type Query{
+    breeds: [Breed]
+    getBreedById(id: Int!): Breed
+}
+
+type Breed{
+    id: Int
+    name: String
+    description: String
+}
