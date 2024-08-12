@@ -1,5 +1,6 @@
 package com.example.wikidemo.Controller;
 import com.example.wikidemo.Entity.Breed;
+import com.example.wikidemo.dto.BreedDTO;
 import com.example.wikidemo.service.WikiService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,15 +22,13 @@ public class WikiController {
 
 
     @QueryMapping
-    public Breed getBreedById(@Argument long id) {
+    public BreedDTO getBreedById(@Argument long id) {
         return wikiService.getBreedById(id);
     }
 
 
     @QueryMapping
-    public List<Breed> breeds() {
-        // This is a mock implementation. In a real scenario, you'd fetch this from a repository or service.
+    public List<BreedDTO> breeds() {
         return wikiService.getAllBreeds();
-
     }
 }

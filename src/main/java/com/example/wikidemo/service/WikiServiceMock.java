@@ -1,6 +1,7 @@
 package com.example.wikidemo.service;
 
 import com.example.wikidemo.Entity.Breed;
+import com.example.wikidemo.dto.BreedDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -10,15 +11,15 @@ import java.util.List;
 public class WikiServiceMock implements WikiService {
 
         @Override
-        public Breed getBreedById(Long id) {
-            return Breed.builder().id(1L).name("Breed1").description("Got by ID").build();
+        public BreedDTO getBreedById(Long id) {
+            return BreedDTO.builder().id(1L).name("Breed1").description("Got by ID").build();
         }
 
 
 
         @Override
-        public Breed getBreedByName(String name) {
-            return Breed.builder().id(2L).name("Breed2").description("Got by name").build();
+        public BreedDTO getBreedByName(String name) {
+            return BreedDTO.builder().id(2L).name("Breed2").description("Got by name").build();
         }
 
         @Override
@@ -37,10 +38,10 @@ public class WikiServiceMock implements WikiService {
         }
 
     @Override
-    public List<Breed> getAllBreeds() {
+    public List<BreedDTO> getAllBreeds() {
         return List.of(
-                Breed.builder().id(1L).name("BreedA").description("Got by list").build(),
-                Breed.builder().id(2L).name("BreedB").description("Got by list").build()
+                BreedDTO.builder().id(1L).name("BreedA").description("Got by list").build(),
+                BreedDTO.builder().id(2L).name("BreedB").description("Got by list").build()
         );
     }
 
