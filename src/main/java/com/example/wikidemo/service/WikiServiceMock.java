@@ -12,7 +12,7 @@ public class WikiServiceMock implements WikiService {
 
         @Override
         public BreedDTO getBreedById(Long id) {
-            return BreedDTO.builder().id(1L).name("Breed1").description("Got by ID").build();
+            return BreedDTO.builder().id(id).name("Breed1").description("Got by ID").build();
         }
 
 

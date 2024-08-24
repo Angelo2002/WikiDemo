@@ -4,6 +4,7 @@ import com.example.wikidemo.dto.BreedDTO;
 
 import java.util.List;
 
+
 public interface WikiService {
     BreedDTO getBreedById(Long id);
     BreedDTO getBreedByName(String name);
